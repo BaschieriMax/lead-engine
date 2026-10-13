@@ -1,8 +1,20 @@
 # lead-engine
 
-Ogni notte trova parrucchieri ed estetiste della zona che su OpenStreetMap non hanno un sito, scarta quelli già visti e salva i candidati nel repository. Alle 06:50 un'attività pianificata di Claude li legge, verifica con una ricerca web che il sito manchi davvero, li profila e prepara il report delle 9:00.
+Trova parrucchieri ed estetiste della zona senza un sito proprio e prepara ogni mattina un report dei potenziali clienti. Costo: 0 €.
 
-## Come funziona
+## I tre canali di scoperta
+
+| Canale | Chi lo fa | Quando | Chiave del lead |
+| --- | --- | --- | --- |
+| OpenStreetMap | GitHub Actions, questo script | Ogni notte, 01:00 UTC | `osm:<tipo>/<id>` (es. `osm:node/123456`) |
+| Ricerca web | Claude, nel giro del mattino | Ogni mattina, 06:50 | `web:<nome>-<comune>` in minuscolo, senza accenti, con trattini |
+| Segnalazioni manuali | Tu, con il modulo **Nuovo lead** nelle Issues | Quando vuoi | `manual:<numero issue>` |
+
+Tutti e tre finiscono nello stesso flusso: Claude verifica che il sito manchi davvero, profila il lead, lo scrive nella Lead Board e lo inserisce nel report delle 9:00. Prima di aggiungere un lead da ricerca web o segnalazione, controlla per nome e comune che non esista già.
+
+**Segnalare un lead**: dall'app GitHub o dal browser, *Issues → New issue → Nuovo lead*. La mattina dopo Claude profila la segnalazione, commenta l'issue con l'esito e la chiude. Va bene anche guardare Google Maps a mano e segnalare le schede senza il pulsante "Sito web": è il normale uso del servizio. Quello che i termini di Google vietano è l'estrazione automatica.
+
+## Come funziona lo script notturno
 
 1. GitHub Actions (`.github/workflows/nightly.yml`) parte alle 01:00 UTC.
 2. `src/index.ts` legge `config/search.json` e interroga la fonte scelta (oggi solo `osm`, tramite Overpass API).

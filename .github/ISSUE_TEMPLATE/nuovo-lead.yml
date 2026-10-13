@@ -1,0 +1,44 @@
+name: Nuovo lead
+description: Segnala un'attività senza sito. La profila Claude nel giro del mattino.
+title: "[Lead] "
+labels: ["lead"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Nome dell'attività
+      placeholder: Salone Anna
+    validations:
+      required: true
+  - type: dropdown
+    id: municipality
+    attributes:
+      label: Comune
+      options:
+        - Sassuolo
+        - Fiorano Modenese
+        - Formigine
+        - Maranello
+        - Altro (scrivilo nelle note)
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Settore
+      options:
+        - Parrucchiere
+        - Estetista
+        - Altro (scrivilo nelle note)
+    validations:
+      required: true
+  - type: input
+    id: maps
+    attributes:
+      label: Link Google Maps o pagina social (facoltativo)
+      placeholder: https://maps.app.goo.gl/...
+  - type: textarea
+    id: notes
+    attributes:
+      label: Note (facoltativo)
+      description: Cosa hai notato? Insegna, vetrina, orari, chi c'era in negozio.
