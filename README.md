@@ -34,7 +34,11 @@ npm run find       # esegue la ricerca e aggiorna data/
 | `municipalities` | Comuni da cercare (confini amministrativi, livello 8) |
 | `categories` | Settori, con il tag OSM corrispondente |
 | `maxNewCandidatesPerRun` | Tetto di nuovi candidati per notte |
-| `osm.delayBetweenRequestsMs` | Pausa tra le query, per rispettare l'istanza pubblica Overpass |
+| `osm.endpoints` | Istanze Overpass, provate in ordine: se una è occupata si passa alla successiva |
+| `osm.delayBetweenRequestsMs` | Pausa tra una query e l'altra, una alla volta e mai in parallelo |
+| `osm.retryPauseMs` | Pausa prima del secondo giro su tutte le istanze (la policy Overpass chiede 30 s) |
+
+Non usiamo l'istanza principale `overpass-api.de`: la sua policy chiede che l'uso commerciale passi da server propri o a pagamento. Le istanze in elenco non hanno limiti dichiarati, ma vanno usate con moderazione: una query per comune a notte.
 
 Per aggiungere una fonte: implementa `LeadSource` in `src/sources/` e registrala in `createSource.ts`. Il resto della pipeline non cambia.
 

@@ -7,8 +7,12 @@
   ],
   "maxNewCandidatesPerRun": 30,
   "osm": {
-    "endpoint": "https://overpass-api.de/api/interpreter",
-    "timeoutSeconds": 60,
-    "delayBetweenRequestsMs": 5000
+    "endpoints": [
+      "https://overpass.private.coffee/api/interpreter",
+      "https://maps.mail.ru/osm/tools/overpass/api/interpreter"
+    ],
+    "timeoutSeconds": 90,
+    "delayBetweenRequestsMs": 5000,
+    "retryPauseMs": 30000
   }
 }

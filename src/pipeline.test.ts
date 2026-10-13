@@ -10,7 +10,7 @@ const config: SearchConfig = {
   municipalities: ['Sassuolo', 'Formigine'],
   categories: [{ id: 'hairdresser', label: 'Parrucchiere', osmTag: { key: 'shop', value: 'hairdresser' } }],
   maxNewCandidatesPerRun: 10,
-  osm: { endpoint: 'https://overpass.test', timeoutSeconds: 60, delayBetweenRequestsMs: 0 },
+  osm: { endpoints: ['https://overpass.test'], timeoutSeconds: 60, delayBetweenRequestsMs: 0, retryPauseMs: 0 },
 };
 
 function lead(id: number, links: string[]): Lead {

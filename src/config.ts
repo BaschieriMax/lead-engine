@@ -13,9 +13,12 @@ export interface CategoryConfig {
 }
 
 export interface OsmConfig {
-  endpoint: string;
+  /** Overpass instances, tried in order: the next one is used when one is busy or down. */
+  endpoints: string[];
   timeoutSeconds: number;
   delayBetweenRequestsMs: number;
+  /** Pause before a second pass over all endpoints (Overpass asks for 30 s after a 429). */
+  retryPauseMs: number;
 }
 
 export interface SearchConfig {
@@ -90,8 +93,14 @@ export function parseConfig(raw: unknown): SearchConfig {
   });
 
   if (!isRecord(raw.osm)) fail('osm must be an object');
-  const endpoint = requireString(raw.osm.endpoint, 'osm.endpoint');
-  if (!endpoint.startsWith('https://')) fail('osm.endpoint must use https');
+  if (!Array.isArray(raw.osm.endpoints) || raw.osm.endpoints.length === 0) {
+    fail('osm.endpoints must be a non-empty array');
+  }
+  const endpoints = raw.osm.endpoints.map((e, i) => {
+    const endpoint = requireString(e, `osm.endpoints[${i}]`);
+    if (!endpoint.startsWith('https://')) fail(`osm.endpoints[${i}] must use https`);
+    return endpoint;
+  });
 
   return {
     source: source as SourceId,
@@ -99,9 +108,10 @@ export function parseConfig(raw: unknown): SearchConfig {
     categories,
     maxNewCandidatesPerRun: requirePositiveInt(raw.maxNewCandidatesPerRun, 'maxNewCandidatesPerRun'),
     osm: {
-      endpoint,
+      endpoints,
       timeoutSeconds: requirePositiveInt(raw.osm.timeoutSeconds, 'osm.timeoutSeconds'),
       delayBetweenRequestsMs: requireNonNegativeInt(raw.osm.delayBetweenRequestsMs, 'osm.delayBetweenRequestsMs'),
+      retryPauseMs: requireNonNegativeInt(raw.osm.retryPauseMs, 'osm.retryPauseMs'),
     },
   };
 }

@@ -65,20 +65,34 @@ export class OsmSource implements LeadSource {
     return { leads: [...leads.values()], errors, skipped };
   }
 
+  /**
+   * Tries every endpoint in order; a busy or unreachable instance hands over to
+   * the next one. If all are busy, waits `retryPauseMs` and makes one more pass.
+   * A non-retryable error (e.g. a malformed query) stops immediately.
+   */
   private async fetchWithRetry(query: string): Promise<OverpassElement[]> {
-    try {
-      return await this.fetchOnce(query);
-    } catch (error) {
-      if (!(error instanceof RetryableError)) throw error;
-      await this.sleep(this.config.delayBetweenRequestsMs * 2);
-      return this.fetchOnce(query);
+    const failures: string[] = [];
+
+    for (let pass = 0; pass < 2; pass += 1) {
+      if (pass > 0) await this.sleep(this.config.retryPauseMs);
+
+      for (const endpoint of this.config.endpoints) {
+        try {
+          return await this.fetchOnce(endpoint, query);
+        } catch (error) {
+          if (!(error instanceof RetryableError)) throw error;
+          failures.push(`${new URL(endpoint).hostname}: ${error.message}`);
+        }
+      }
     }
+
+    throw new Error(`All Overpass endpoints failed (${failures.join('; ')})`);
   }
 
-  private async fetchOnce(query: string): Promise<OverpassElement[]> {
+  private async fetchOnce(endpoint: string, query: string): Promise<OverpassElement[]> {
     let response: Response;
     try {
-      response = await this.fetchFn(this.config.endpoint, {
+      response = await this.fetchFn(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -90,7 +104,7 @@ export class OsmSource implements LeadSource {
       });
     } catch (error) {
       // Network failures and aborts are transient: retry once.
-      throw new RetryableError(`Overpass request failed: ${error instanceof Error ? error.message : String(error)}`);
+      throw new RetryableError(`request failed: ${error instanceof Error ? error.message : String(error)}`);
     }
 
     if (!response.ok) {
@@ -99,8 +113,19 @@ export class OsmSource implements LeadSource {
       throw new Error(message);
     }
 
-    const body: unknown = await response.json();
+    let body: unknown;
+    try {
+      body = await response.json();
+    } catch {
+      // Overloaded instances sometimes answer 200 with an HTML error page.
+      throw new RetryableError('response is not JSON');
+    }
     if (!isOverpassResponse(body)) throw new Error('Unexpected Overpass response shape');
+    // Overpass reports server-side timeouts in `remark` with a partial element list.
+    const remark = (body as { remark?: unknown }).remark;
+    if (typeof remark === 'string' && /runtime error|timed out|out of memory/i.test(remark)) {
+      throw new RetryableError(`server error: ${remark.slice(0, 120)}`);
+    }
     return body.elements;
   }
 }

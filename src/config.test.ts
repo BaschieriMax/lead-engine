@@ -7,7 +7,12 @@ const valid = {
   municipalities: ['Sassuolo'],
   categories: [{ id: 'hairdresser', label: 'Parrucchiere', osmTag: { key: 'shop', value: 'hairdresser' } }],
   maxNewCandidatesPerRun: 30,
-  osm: { endpoint: 'https://overpass-api.de/api/interpreter', timeoutSeconds: 60, delayBetweenRequestsMs: 5000 },
+  osm: {
+    endpoints: ['https://overpass.private.coffee/api/interpreter'],
+    timeoutSeconds: 60,
+    delayBetweenRequestsMs: 5000,
+    retryPauseMs: 30000,
+  },
 };
 
 describe('parseConfig', () => {
@@ -29,7 +34,11 @@ describe('parseConfig', () => {
   });
 
   it('rejects a non-https endpoint', () => {
-    expect(() => parseConfig({ ...valid, osm: { ...valid.osm, endpoint: 'http://overpass-api.de' } })).toThrow(/https/);
+    expect(() => parseConfig({ ...valid, osm: { ...valid.osm, endpoints: ['http://overpass.test'] } })).toThrow(/https/);
+  });
+
+  it('rejects an empty endpoint list', () => {
+    expect(() => parseConfig({ ...valid, osm: { ...valid.osm, endpoints: [] } })).toThrow(/non-empty array/);
   });
 
   it('rejects a non-positive cap', () => {
