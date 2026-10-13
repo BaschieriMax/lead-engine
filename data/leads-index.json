@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "leads": {
+    "osm:node/11815447746": {
+      "leadKey": "osm:node/11815447746",
+      "name": "Coka Club",
+      "normName": "coka-club",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "osm:node/11815447736": {
+      "leadKey": "osm:node/11815447736",
+      "name": "Betty Bizzarro",
+      "normName": "betty-bizzarro",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "osm:node/12896180870": {
+      "leadKey": "osm:node/12896180870",
+      "name": "Baylages",
+      "normName": "baylages",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "osm:node/1377667910": {
+      "leadKey": "osm:node/1377667910",
+      "name": "Catia Style",
+      "normName": "catia-style",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "osm:node/1071246045": {
+      "leadKey": "osm:node/1071246045",
+      "name": "Spartano",
+      "normName": "spartano",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "web:della-volpe-formigine": {
+      "leadKey": "web:della-volpe-formigine",
+      "name": "della Volpe Parrucchieri",
+      "normName": "della-volpe",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "web:magie-acconciature-formigine": {
+      "leadKey": "web:magie-acconciature-formigine",
+      "name": "Magie' Acconciature",
+      "normName": "magie-acconciature",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "web:costabile-miti-mode-formigine": {
+      "leadKey": "web:costabile-miti-mode-formigine",
+      "name": "Costabile Miti & Mode Parrucchieri",
+      "normName": "costabile-miti-mode",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "web:adela-hair-style-unisex-formigine": {
+      "leadKey": "web:adela-hair-style-unisex-formigine",
+      "name": "Adela Hair Style Unisex",
+      "normName": "adela-hair-style-unisex",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "web:luna-formigine": {
+      "leadKey": "web:luna-formigine",
+      "name": "Luna Parruchiere",
+      "normName": "luna",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "profiled"
+    },
+    "web:a-m-formigine": {
+      "leadKey": "web:a-m-formigine",
+      "name": "A.M. Parrucchiere",
+      "normName": "a-m",
+      "municipality": "Formigine",
+      "firstSeen": "2026-10-13",
+      "outcome": "has_site"
+    }
+  }
+}
