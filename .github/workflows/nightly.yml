@@ -1,0 +1,52 @@
+name: Nightly lead discovery
+
+on:
+  schedule:
+    # 01:00 UTC = 03:00 in Italy during summer time, 02:00 in winter.
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly-lead-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck and test
+        run: |
+          npm run typecheck
+          npm test
+
+      - name: Find candidates
+        id: find
+        run: npm run find
+
+      # Runs even when the search failed: latest.json then carries the errors
+      # for the morning report.
+      - name: Commit data
+        if: ${{ !cancelled() && steps.find.outcome != 'skipped' }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+            exit 0
+          fi
+          git commit -m "Aggiorna candidati notturni del $(TZ=Europe/Rome date +%F)"
+          git push

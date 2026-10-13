@@ -1,0 +1,14 @@
+{
+  "source": "osm",
+  "municipalities": ["Sassuolo", "Fiorano Modenese", "Formigine", "Maranello"],
+  "categories": [
+    { "id": "hairdresser", "label": "Parrucchiere", "osmTag": { "key": "shop", "value": "hairdresser" } },
+    { "id": "beauty", "label": "Estetista", "osmTag": { "key": "shop", "value": "beauty" } }
+  ],
+  "maxNewCandidatesPerRun": 30,
+  "osm": {
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "timeoutSeconds": 60,
+    "delayBetweenRequestsMs": 5000
+  }
+}
