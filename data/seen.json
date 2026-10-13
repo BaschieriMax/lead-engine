@@ -1,9 +1,37 @@
 {
   "version": 1,
   "entries": {
+    "osm:node/1071246045": {
+      "firstSeen": "2026-10-13",
+      "webStatus": "none"
+    },
+    "osm:node/11073966560": {
+      "firstSeen": "2026-10-13",
+      "webStatus": "has_site"
+    },
+    "osm:node/11815447736": {
+      "firstSeen": "2026-10-13",
+      "webStatus": "none"
+    },
+    "osm:node/11815447746": {
+      "firstSeen": "2026-10-13",
+      "webStatus": "none"
+    },
+    "osm:node/12896180870": {
+      "firstSeen": "2026-10-13",
+      "webStatus": "none"
+    },
+    "osm:node/1377667910": {
+      "firstSeen": "2026-10-13",
+      "webStatus": "none"
+    },
     "osm:node/3870591442": {
       "firstSeen": "2026-10-13",
       "webStatus": "none"
+    },
+    "osm:node/4769502828": {
+      "firstSeen": "2026-10-13",
+      "webStatus": "has_site"
     }
   }
 }
