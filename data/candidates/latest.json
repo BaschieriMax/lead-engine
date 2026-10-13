@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-10-13T12:46:10.346Z",
+  "runDate": "2026-10-13",
+  "status": "partial",
+  "source": "osm",
+  "attribution": "© OpenStreetMap contributors, ODbL (https://www.openstreetmap.org/copyright)",
+  "stats": {
+    "fetched": 1,
+    "skipped": 0,
+    "hasSite": 0,
+    "alreadySeen": 0,
+    "newCandidates": 1,
+    "deferred": 0
+  },
+  "errors": [
+    {
+      "municipality": "Sassuolo",
+      "message": "Overpass responded 504 Gateway Timeout"
+    },
+    {
+      "municipality": "Fiorano Modenese",
+      "message": "Overpass responded 504 Gateway Timeout"
+    },
+    {
+      "municipality": "Formigine",
+      "message": "Overpass responded 504 Gateway Timeout"
+    }
+  ],
+  "candidates": [
+    {
+      "leadKey": "osm:node/3870591442",
+      "source": "osm",
+      "name": "Acconciature Daniela",
+      "categoryId": "hairdresser",
+      "categoryLabel": "Parrucchiere",
+      "municipality": "Maranello",
+      "address": {
+        "street": "Via Graziosi",
+        "postcode": "41053",
+        "city": "Maranello"
+      },
+      "location": {
+        "lat": 44.524524,
+        "lon": 10.8593949
+      },
+      "contacts": {},
+      "links": [],
+      "sourceUrl": "https://www.openstreetmap.org/node/3870591442",
+      "webStatus": "none"
+    }
+  ]
+}
