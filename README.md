@@ -22,8 +22,12 @@ Tutti e tre finiscono nello stesso flusso: Claude verifica che il sito manchi da
    - `none` — nessun link
    - `social_only` — solo social, directory o piattaforme di prenotazione
    - `has_site` — almeno un sito proprio (scartata)
-4. Le nuove attività senza sito vengono scritte in `data/candidates/latest.json`, al massimo `maxNewCandidatesPerRun` per notte; quelle in eccesso tornano la notte dopo.
-5. `data/seen.json` registra solo `leadKey`, data di prima scoperta e classificazione, per non riproporre gli stessi lead.
+4. Le nuove attività senza sito entrano nella **coda** `data/candidates/latest.json` (campo `candidates`), al massimo `maxNewCandidatesPerRun` per notte; quelle in eccesso tornano la notte dopo.
+5. La coda si accumula da una notte all'altra: ogni candidato resta finché il giro lead non lo elabora. Lo script toglie dalla coda le chiavi già presenti in `data/leads-index.json`, sia che il lead sia stato profilato sia che sia stato scartato. Se la ricerca fallisce, la coda resta com'era.
+6. Ogni candidato ha `queuedOn`, la data di ingresso in coda. L'ordine è: prima chi non ha nessun link, poi i più vecchi, poi per nome.
+7. `data/seen.json` registra solo `leadKey`, data di prima scoperta e classificazione, per non riproporre gli stessi lead.
+
+Il giro lead parte solo su richiesta di Massimo: tra un giro e l'altro la coda cresce e non si perde nulla.
 
 `none` significa "nessun sito su OpenStreetMap", non "nessun sito": la verifica vera la fa il profiler.
 

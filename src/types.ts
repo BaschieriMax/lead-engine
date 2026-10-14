@@ -42,9 +42,15 @@ export interface Lead {
   sourceUrl: string;
 }
 
-/** A lead after website classification, as written to the candidates file. */
+/** A lead after website classification. */
 export interface Candidate extends Lead {
   webStatus: WebStatus;
+}
+
+/** A candidate waiting in the queue until the lead run processes it. */
+export interface QueuedCandidate extends Candidate {
+  /** Run date (YYYY-MM-DD, Europe/Rome) when the candidate entered the queue. */
+  queuedOn: string;
 }
 
 export interface SourceError {
