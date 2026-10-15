@@ -1,25 +1,35 @@
 {
-  "generatedAt": "2026-10-14T05:36:06.636Z",
-  "runDate": "2026-10-14",
-  "status": "partial",
+  "generatedAt": "2026-10-15T05:23:37.401Z",
+  "runDate": "2026-10-15",
+  "status": "failed",
   "source": "osm",
   "attribution": "© OpenStreetMap contributors, ODbL (https://www.openstreetmap.org/copyright)",
   "stats": {
-    "fetched": 19,
+    "fetched": 0,
     "skipped": 0,
     "hasSite": 0,
-    "alreadySeen": 1,
-    "newCandidates": 18,
-    "deferred": 0
+    "alreadySeen": 0,
+    "newCandidates": 0,
+    "deferred": 0,
+    "removedProcessed": 0,
+    "pending": 18
   },
   "errors": [
     {
       "municipality": "Sassuolo",
-      "message": "All Overpass endpoints failed (overpass.private.coffee: request failed: The operation was aborted due to timeout; maps.mail.ru: Overpass responded 504 Gateway Time-out; overpass.private.coffee: Overpass responded 504 Gateway Timeout; maps.mail.ru: Overpass responded 504 Gateway Time-out)"
+      "message": "Overpass responded 500 Internal Server Error"
+    },
+    {
+      "municipality": "Fiorano Modenese",
+      "message": "Overpass responded 500 Internal Server Error"
     },
     {
       "municipality": "Formigine",
-      "message": "All Overpass endpoints failed (overpass.private.coffee: request failed: The operation was aborted due to timeout; maps.mail.ru: Overpass responded 504 Gateway Timeout; overpass.private.coffee: Overpass responded 504 Gateway Timeout; maps.mail.ru: Overpass responded 504 Gateway Time-out)"
+      "message": "Overpass responded 500 Internal Server Error"
+    },
+    {
+      "municipality": "Maranello",
+      "message": "Overpass responded 500 Internal Server Error"
     }
   ],
   "candidates": [
@@ -43,7 +53,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2107355583",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2519596129",
@@ -65,7 +76,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2519596129",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2084464191",
@@ -87,7 +99,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2084464191",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2519525972",
@@ -109,7 +122,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2519525972",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2499651582",
@@ -131,7 +145,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2499651582",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2110340870",
@@ -153,7 +168,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2110340870",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2084464202",
@@ -175,7 +191,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2084464202",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2491000492",
@@ -197,7 +214,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2491000492",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2137565283",
@@ -219,7 +237,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2137565283",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2507944203",
@@ -241,7 +260,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2507944203",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2608472670",
@@ -263,7 +283,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2608472670",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2125082996",
@@ -285,7 +306,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2125082996",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2305963886",
@@ -307,7 +329,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2305963886",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2233961098",
@@ -329,7 +352,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2233961098",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2125031048",
@@ -351,7 +375,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2125031048",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2119438437",
@@ -373,7 +398,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2119438437",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2526150939",
@@ -395,7 +421,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2526150939",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     },
     {
       "leadKey": "osm:node/2106762102",
@@ -417,7 +444,8 @@
       "contacts": {},
       "links": [],
       "sourceUrl": "https://www.openstreetmap.org/node/2106762102",
-      "webStatus": "none"
+      "webStatus": "none",
+      "queuedOn": "2026-10-14"
     }
   ]
 }
