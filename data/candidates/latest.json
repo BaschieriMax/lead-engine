@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-19T05:27:16.364Z",
-  "runDate": "2026-10-19",
-  "status": "failed",
+  "generatedAt": "2026-10-20T05:30:03.173Z",
+  "runDate": "2026-10-20",
+  "status": "partial",
   "source": "osm",
   "attribution": "© OpenStreetMap contributors, ODbL (https://www.openstreetmap.org/copyright)",
   "stats": {
-    "fetched": 0,
-    "skipped": 0,
+    "fetched": 6,
+    "skipped": 3,
     "hasSite": 0,
-    "alreadySeen": 0,
+    "alreadySeen": 6,
     "newCandidates": 0,
     "deferred": 0,
     "removedProcessed": 0,
@@ -17,19 +17,11 @@
   "errors": [
     {
       "municipality": "Sassuolo",
-      "message": "Overpass responded 500 Internal Server Error"
+      "message": "All Overpass endpoints failed (overpass.private.coffee: request failed: The operation was aborted due to timeout; maps.mail.ru: Overpass responded 504 Gateway Time-out; overpass.private.coffee: request failed: The operation was aborted due to timeout; maps.mail.ru: Overpass responded 504 Gateway Time-out)"
     },
     {
       "municipality": "Fiorano Modenese",
-      "message": "Overpass responded 500 Internal Server Error"
-    },
-    {
-      "municipality": "Formigine",
-      "message": "Overpass responded 500 Internal Server Error"
-    },
-    {
-      "municipality": "Maranello",
-      "message": "Overpass responded 500 Internal Server Error"
+      "message": "All Overpass endpoints failed (overpass.private.coffee: request failed: The operation was aborted due to timeout; maps.mail.ru: Overpass responded 504 Gateway Time-out; overpass.private.coffee: request failed: The operation was aborted due to timeout; maps.mail.ru: Overpass responded 504 Gateway Time-out)"
     }
   ],
   "candidates": [
