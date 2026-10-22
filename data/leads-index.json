@@ -188,6 +188,116 @@
       "outcome": "profiled",
       "score": 59,
       "channel": "osm"
+    },
+    "osm:node/2106762102": {
+      "leadKey": "osm:node/2106762102",
+      "name": "Soleluna",
+      "normName": "soleluna",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 63,
+      "channel": "osm"
+    },
+    "osm:node/2608472670": {
+      "leadKey": "osm:node/2608472670",
+      "name": "Giovanna Staff",
+      "normName": "giovanna-staff",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 61,
+      "channel": "osm"
+    },
+    "osm:node/2233961098": {
+      "leadKey": "osm:node/2233961098",
+      "name": "Jessica Hair Style",
+      "normName": "jessica-hair-style",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 61,
+      "channel": "osm"
+    },
+    "osm:node/2125082996": {
+      "leadKey": "osm:node/2125082996",
+      "name": "Graziano Parrucchiere",
+      "normName": "graziano",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 61,
+      "channel": "osm"
+    },
+    "osm:node/2119438437": {
+      "leadKey": "osm:node/2119438437",
+      "name": "Costanza Nicolò",
+      "normName": "costanza-nicolo",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 61,
+      "channel": "osm"
+    },
+    "osm:node/2305963886": {
+      "leadKey": "osm:node/2305963886",
+      "name": "Hair Fashion",
+      "normName": "hair-fashion",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 59,
+      "channel": "osm"
+    },
+    "osm:node/2125031048": {
+      "leadKey": "osm:node/2125031048",
+      "name": "KAKAO",
+      "normName": "kakao",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 59,
+      "channel": "osm"
+    },
+    "web:milena-fiorano-modenese": {
+      "leadKey": "web:milena-fiorano-modenese",
+      "name": "Parrucchiera Milena",
+      "normName": "milena",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 61,
+      "channel": "web"
+    },
+    "web:denis-magoni-fiorano-modenese": {
+      "leadKey": "web:denis-magoni-fiorano-modenese",
+      "name": "Acconciatore Denis",
+      "normName": "denis",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 61,
+      "channel": "web"
+    },
+    "web:franca-rosi-fiorano-modenese": {
+      "leadKey": "web:franca-rosi-fiorano-modenese",
+      "name": "Franca & Rosi",
+      "normName": "franca-rosi",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 61,
+      "channel": "web"
+    },
+    "osm:node/2526150939": {
+      "leadKey": "osm:node/2526150939",
+      "name": "Only For Friends",
+      "normName": "only-for-friends",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "excluded",
+      "note": "Studio di tatuaggi e piercing, fuori settore",
+      "channel": "osm"
     }
   }
 }
