@@ -88,6 +88,106 @@
       "municipality": "Formigine",
       "firstSeen": "2026-10-13",
       "outcome": "has_site"
+    },
+    "osm:node/2499651582": {
+      "leadKey": "osm:node/2499651582",
+      "name": "Parrucchiera Rosi Samu Pino",
+      "normName": "rosi-samu-pino",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 72,
+      "channel": "osm"
+    },
+    "osm:node/2110340870": {
+      "leadKey": "osm:node/2110340870",
+      "name": "CaDa Look",
+      "normName": "cada-look",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 65,
+      "channel": "osm"
+    },
+    "osm:node/2107355583": {
+      "leadKey": "osm:node/2107355583",
+      "name": "Laiso Parrucchieri",
+      "normName": "laiso",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 64,
+      "channel": "osm"
+    },
+    "osm:node/2084464191": {
+      "leadKey": "osm:node/2084464191",
+      "name": "Aromia Centro Estetico",
+      "normName": "aromia",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 64,
+      "channel": "osm"
+    },
+    "osm:node/2491000492": {
+      "leadKey": "osm:node/2491000492",
+      "name": "Energia Vitale",
+      "normName": "energia-vitale",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 63,
+      "channel": "osm"
+    },
+    "osm:node/2137565283": {
+      "leadKey": "osm:node/2137565283",
+      "name": "Estetica Claudia",
+      "normName": "claudia",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 62,
+      "channel": "osm"
+    },
+    "osm:node/2519596129": {
+      "leadKey": "osm:node/2519596129",
+      "name": "Appio Valeria",
+      "normName": "appio-valeria",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 61,
+      "channel": "osm"
+    },
+    "osm:node/2084464202": {
+      "leadKey": "osm:node/2084464202",
+      "name": "Ciak Parrucchieri",
+      "normName": "ciak",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 59,
+      "channel": "osm"
+    },
+    "osm:node/2507944203": {
+      "leadKey": "osm:node/2507944203",
+      "name": "Estetica Emanuela",
+      "normName": "emanuela",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 59,
+      "channel": "osm"
+    },
+    "osm:node/2519525972": {
+      "leadKey": "osm:node/2519525972",
+      "name": "Athletic Club",
+      "normName": "athletic-club",
+      "municipality": "Fiorano Modenese",
+      "firstSeen": "2026-10-22",
+      "outcome": "profiled",
+      "score": 59,
+      "channel": "osm"
     }
   }
 }
