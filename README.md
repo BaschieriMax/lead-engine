@@ -12,7 +12,9 @@ Trova parrucchieri ed estetiste della zona senza un sito proprio e prepara ogni 
 
 Tutti e tre finiscono nello stesso flusso: Claude verifica che il sito manchi davvero, profila il lead, lo scrive nella Lead Board e lo inserisce nel report delle 9:00. Prima di aggiungere un lead da ricerca web o segnalazione, controlla per nome e comune che non esista già.
 
-**Segnalare un lead**: dall'app GitHub o dal browser, *Issues → New issue → Nuovo lead*. La mattina dopo Claude profila la segnalazione, commenta l'issue con l'esito e la chiude. Va bene anche guardare Google Maps a mano e segnalare le schede senza il pulsante "Sito web": è il normale uso del servizio. Quello che i termini di Google vietano è l'estrazione automatica.
+**Dove si leggono i lead**: nel Google Sheet "Lead Engine" (fogli *Lead*, *Segnalazioni*, *Riepilogo*). Il giro lead aggiunge una riga per ogni lead profilato; la colonna Stato e le Note sono di Massimo e il giro non le tocca. Il repo resta il motore: coda, indice e storico dei report.
+
+**Segnalare un lead**: scrivi nome e comune nel foglio *Segnalazioni* dello Sheet. Al giro successivo Claude profila la segnalazione, la aggiunge al foglio Lead e compila la colonna Esito. Funziona ancora anche il modulo *Nuovo lead* nelle Issues di GitHub. Va bene anche guardare Google Maps a mano e segnalare le schede senza il pulsante "Sito web": è il normale uso del servizio. Quello che i termini di Google vietano è l'estrazione automatica.
 
 ## Come funziona lo script notturno
 
