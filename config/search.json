@@ -1,6 +1,15 @@
 {
   "source": "osm",
-  "municipalities": ["Sassuolo", "Fiorano Modenese", "Formigine", "Maranello"],
+  "municipalities": [
+    "Sassuolo",
+    "Fiorano Modenese",
+    "Formigine",
+    "Maranello",
+    "Castellarano",
+    "Casalgrande",
+    "Prignano sulla Secchia",
+    "Serramazzoni"
+  ],
   "categories": [
     { "id": "hairdresser", "label": "Parrucchiere", "osmTag": { "key": "shop", "value": "hairdresser" } },
     { "id": "beauty", "label": "Estetista", "osmTag": { "key": "shop", "value": "beauty" } }
